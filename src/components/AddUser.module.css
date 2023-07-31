@@ -24,9 +24,3 @@
     outline: none;
     border-color: #4f005f;
 }
-
-.actions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}

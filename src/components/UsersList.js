@@ -1,8 +1,10 @@
+import Card from "./Card";
+
 import classes from "./UsersList.module.css";
 
 const UsersList = (props) => {
   return (
-    <div className={classes.users}>
+    <Card className={classes.users}>
       <ul>
         {props.usersList.map((user, index) => (
           <li key={index}>
@@ -10,7 +12,7 @@ const UsersList = (props) => {
           </li>
         ))}
       </ul>
-    </div>
+    </Card>
   );
 };
 export default UsersList;

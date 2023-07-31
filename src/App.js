@@ -6,39 +6,40 @@ import ErrorModal from "./components/ErrorModal";
 
 function App() {
   const [usersList, setUsersList] = useState([]);
-  const [showedError, setShowedError] = useState(false);
-  const [erroredInfo, setErroredInfo] = useState({
-    username: false,
-    userage: false,
-  });
+  // const [showedError, setShowedError] = useState(false);
+  // const [erroredInfo, setErroredInfo] = useState({
+  //   username: false,
+  //   userage: false,
+  // });
 
   const addUserHandler = (userInput) => {
-    if (userInput.username.trim().length > 0 && +userInput.userage >= 0) {
-      setUsersList((usersList) => [...usersList, userInput]);
-    } else {
-      setErroredInfo({
-        username: userInput.username.trim().length === 0,
-        userage: +userInput.userage < 0,
-      });
-      setShowedError(true);
-    }
+    // if (userInput.username.trim().length > 0 && +userInput.userage >= 0) {
+    //   setUsersList((usersList) => [...usersList, userInput]);
+    // } else {
+    //   setErroredInfo({
+    //     username: userInput.username.trim().length === 0,
+    //     userage: +userInput.userage < 0,
+    //   });
+    //   setShowedError(true);
+    // }
+
+    setUsersList((usersList) => [...usersList, userInput]);
   };
 
-  const closeErrorHandler = () => {
-    setShowedError(false);
-  };
+  // const closeErrorHandler = () => {
+  //   setShowedError(false);
+  // };
 
   return (
     <div>
-      <h1>Add User</h1>
       <AddUser onSubmitForm={addUserHandler}></AddUser>
       <UsersList usersList={usersList}></UsersList>
-      {showedError && (
+      {/* {showedError && (
         <ErrorModal
           errorData={erroredInfo}
           onCloseError={closeErrorHandler}
         ></ErrorModal>
-      )}
+      )} */}
     </div>
   );
 }
