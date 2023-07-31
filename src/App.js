@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, Fragment } from "react";
 import AddUser from "./components/AddUser";
 import UsersList from "./components/UsersList";
 import ErrorModal from "./components/ErrorModal";
@@ -31,7 +31,7 @@ function App() {
   // };
 
   return (
-    <div>
+    <Fragment>
       <AddUser onSubmitForm={addUserHandler}></AddUser>
       <UsersList usersList={usersList}></UsersList>
       {/* {showedError && (
@@ -40,7 +40,7 @@ function App() {
           onCloseError={closeErrorHandler}
         ></ErrorModal>
       )} */}
-    </div>
+    </Fragment>
   );
 }
 
